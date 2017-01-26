@@ -1,6 +1,5 @@
 node_modules/
 bundle.js
-renderer/index.html
 
 # misc
 .DS_Store

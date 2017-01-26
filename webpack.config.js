@@ -1,5 +1,3 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-
 const rules = [
   { test: /\.json$/, use: 'json-loader' },
   { test: /\.css$/, use: 'style-loader!css-loader' }
@@ -12,7 +10,7 @@ const mainConfig = {
     filename: 'bundle.js',
     path: './main'
   },
-  node: { // webpack please don't mock the following
+  node: { // Please don't mock the following:
     __dirname: false,
     __filename: false
   },
@@ -26,10 +24,7 @@ const rendererConfig = {
     filename: 'bundle.js',
     path: './renderer'
   },
-  module: { rules },
-  plugins: [
-    new HtmlWebpackPlugin()
-  ]
+  module: { rules }
 }
 
 module.exports = [
