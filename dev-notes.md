@@ -11,3 +11,9 @@ yarn run upgrade
 yarn run server
 yarn run electron
 ```
+
+## Build
+
+```
+yarn build
+```

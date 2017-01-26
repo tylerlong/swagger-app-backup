@@ -6,6 +6,7 @@
   "main": "main/index.js",
   "scripts": {
     "upgrade": "ncu -ua && yarn upgrade",
+    "build": "webpack --progress --colors",
     "server": "webpack-dev-server --progress --colors --hot --inline --content-base frontend/public",
     "electron": "electron ."
   },
