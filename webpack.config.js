@@ -3,6 +3,41 @@ const rules = [
   { test: /\.css$/, use: 'style-loader!css-loader' }
 ]
 
+const mainRules = [
+  {
+    test: /\.js$/,
+    loader: 'babel-loader',
+    exclude: [ './node_modules' ],
+    query: {
+      presets: [
+        ['env', {
+          'targets': {
+            'electron': 1.4
+          }
+        }]
+      ]
+    }
+  }
+]
+
+const rendererRules = [
+  {
+    test: /\.js$/,
+    loader: 'babel-loader',
+    exclude: [ './node_modules' ],
+    query: {
+      presets: [
+        ['env', {
+          'targets': {
+            'browsers': ['last 2 Chrome versions']
+          }
+        }],
+        'react'
+      ]
+    }
+  }
+]
+
 const mainConfig = {
   target: 'electron-main',
   entry: './main/index.js',
@@ -14,7 +49,7 @@ const mainConfig = {
     __dirname: false,
     __filename: false
   },
-  module: { rules }
+  module: { rules: rules.concat(mainRules) }
 }
 
 const rendererConfig = {
@@ -24,7 +59,7 @@ const rendererConfig = {
     filename: 'bundle.js',
     path: './renderer'
   },
-  module: { rules }
+  module: { rules: rules.concat(rendererRules) }
 }
 
 module.exports = [
