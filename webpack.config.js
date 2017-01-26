@@ -12,6 +12,10 @@ const mainConfig = {
     filename: 'bundle.js',
     path: './main'
   },
+  node: { // webpack please don't mock the following
+    __dirname: false,
+    __filename: false
+  },
   module: { rules }
 }
 

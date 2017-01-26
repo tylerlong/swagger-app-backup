@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "description": "An app to create swagger spec.",
-  "main": "main/index.js",
+  "main": "main/bundle.js",
   "scripts": {
     "upgrade": "ncu -ua && yarn upgrade",
     "build": "webpack --progress --colors --watch",
