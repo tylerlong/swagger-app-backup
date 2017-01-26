@@ -1,19 +1,31 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+
+const rules = [
+  { test: /\.json$/, use: 'json-loader' },
+  { test: /\.css$/, use: 'style-loader!css-loader' }
+]
+
 const mainConfig = {
+  target: 'electron-main',
   entry: './main/index.js',
   output: {
     filename: 'bundle.js',
     path: './main'
   },
-  target: 'electron'
+  module: { rules }
 }
 
 const rendererConfig = {
+  target: 'electron-renderer',
   entry: './renderer/index.js',
   output: {
     filename: 'bundle.js',
     path: './renderer'
   },
-  target: 'electron-renderer'
+  module: { rules },
+  plugins: [
+    new HtmlWebpackPlugin()
+  ]
 }
 
 module.exports = [

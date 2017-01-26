@@ -6,8 +6,8 @@
   "main": "main/index.js",
   "scripts": {
     "upgrade": "ncu -ua && yarn upgrade",
-    "build": "webpack --progress --colors",
-    "server": "webpack-dev-server --progress --colors --hot --inline --content-base frontend/public",
+    "build": "webpack --progress --colors --watch",
+    "server": "webpack-dev-server --progress --colors --hot --inline --content-base renderer",
     "electron": "electron ."
   },
   "repository": "git@github.com:tylerlong/swagger-app.git",
@@ -21,6 +21,7 @@
     "babel-preset-react": "^6.22.0",
     "css-loader": "^0.26.1",
     "file-loader": "^0.9.0",
+    "html-webpack-plugin": "^2.26.0",
     "json-loader": "^0.5.4",
     "npm-check-updates": "^2.8.9",
     "standard": "^8.6.0",
