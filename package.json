@@ -7,6 +7,7 @@
   "scripts": {
     "upgrade": "ncu -ua && yarn upgrade",
     "build": "webpack --progress --colors --watch",
+    "release": "webpack -p",
     "electron": "electron ."
   },
   "repository": "git@github.com:tylerlong/swagger-app.git",
