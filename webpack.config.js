@@ -1,7 +1,4 @@
-const mainConfig = require('./webpack.config.main')
-const rendererConfig = require('./webpack.config.renderer')
+import mainConfig from './webpack.config.main'
+import rendererConfig from './webpack.config.renderer'
 
-module.exports = [
-  mainConfig,
-  rendererConfig
-]
+export default [ mainConfig, rendererConfig ]

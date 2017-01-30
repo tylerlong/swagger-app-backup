@@ -8,4 +8,4 @@ const rules = [
   }
 ]
 
-module.exports = rules
+export default rules

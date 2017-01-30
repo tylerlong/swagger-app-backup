@@ -1,4 +1,4 @@
-const rules = require('./webpack.config.base')
+import rules from './webpack.config.base'
 
 const rendererRules = [
   {
@@ -29,4 +29,4 @@ const rendererConfig = {
   module: { rules: rules.concat(rendererRules) }
 }
 
-module.exports = rendererConfig
+export default rendererConfig

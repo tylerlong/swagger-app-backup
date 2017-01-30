@@ -32,4 +32,4 @@ const mainConfig = {
   module: { rules: rules.concat(mainRules) }
 }
 
-module.exports = mainConfig
+export default mainConfig
