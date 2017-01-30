@@ -3,17 +3,18 @@ const rules = require('./webpack.config.base')
 const rendererRules = [
   {
     test: /\.js$/,
-    loader: 'babel-loader',
-    exclude: ['./node_modules'],
-    query: {
-      presets: [
-        ['env', {
-          'targets': {
-            'browsers': ['last 2 Chrome versions']
-          }
-        }],
-        'react'
-      ]
+    use: {
+      loader: 'babel-loader',
+      options: {
+        presets: [
+          ['env', {
+            'targets': {
+              'browsers': ['last 2 Chrome versions']
+            }
+          }],
+          'react'
+        ]
+      }
     }
   }
 ]

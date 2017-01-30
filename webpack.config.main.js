@@ -3,16 +3,17 @@ const rules = require('./webpack.config.base')
 const mainRules = [
   {
     test: /\.js$/,
-    loader: 'babel-loader',
-    exclude: ['./node_modules'],
-    query: {
-      presets: [
-        ['env', {
-          'targets': {
-            'electron': 1.4
-          }
-        }]
-      ]
+    use: {
+      loader: 'babel-loader',
+      options: {
+        presets: [
+          ['env', {
+            'targets': {
+              'electron': 1.4
+            }
+          }]
+        ]
+      }
     }
   }
 ]
