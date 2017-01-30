@@ -1,4 +1,4 @@
-const rules = require('./webpack.config.base')
+import rules from './webpack.config.base'
 
 const mainRules = [
   {
