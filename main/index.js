@@ -1,16 +1,11 @@
 import { app, BrowserWindow } from 'electron'
 import path from 'path'
-import url from 'url'
 
 let browserWindow
 
 function createWindow () {
   browserWindow = new BrowserWindow({ width: 800, height: 600 })
-  browserWindow.loadURL(url.format({
-    pathname: path.join(__dirname, '../renderer/index.html'),
-    protocol: 'file:',
-    slashes: true
-  }))
+  browserWindow.loadURL(path.join('file://', __dirname, '../renderer/index.html'))
 
   browserWindow.webContents.openDevTools()
 
