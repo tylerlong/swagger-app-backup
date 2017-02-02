@@ -1,7 +1,7 @@
 import { app, BrowserWindow } from 'electron'
 import path from 'path'
 
-let browserWindow
+let browserWindow = null
 
 function createWindow () {
   browserWindow = new BrowserWindow({ width: 800, height: 600 })
