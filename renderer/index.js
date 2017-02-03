@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { DatePicker, message, LocaleProvider } from 'antd'
-import enUS from 'antd/lib/locale-provider/en_US';
+import enUS from 'antd/lib/locale-provider/en_US'
 
 ReactDOM.render(
   <LocaleProvider locale={enUS}>
