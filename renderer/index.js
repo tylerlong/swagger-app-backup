@@ -1,11 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { DatePicker } from 'antd'
+import { DatePicker, message } from 'antd'
 
 ReactDOM.render(
   <div>
-    <h1>I am running Node.js {process.versions.node}, Electron {process.versions.electron} and Chrome {process.versions.chrome}.</h1>
-    <DatePicker />
+    <p>I am running Node.js {process.versions.node}, Electron {process.versions.electron} and Chrome {process.versions.chrome}.</p>
+    <DatePicker onChange={value => message.success(value.toISOString())} />
   </div>,
   document.getElementById('root')
 )
