@@ -13,7 +13,8 @@ const rendererRules = [
             }
           }],
           'react'
-        ]
+        ],
+        plugins: [['import', { libraryName: 'antd', style: 'css' }]]
       }
     }
   }
