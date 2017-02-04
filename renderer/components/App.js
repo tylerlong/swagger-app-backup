@@ -1,8 +1,10 @@
 import React from 'react'
 import { Layout, Menu, Button } from 'antd'
-const { Header, Content, Footer } = Layout
+import { Link } from 'react-router'
 
 import Metadata from './metadata'
+
+const { Header, Content, Footer } = Layout
 
 class App extends React.Component {
   render () {
@@ -20,8 +22,8 @@ class App extends React.Component {
         <Layout className='layout'>
           <Header>
             <Menu theme='dark' mode='horizontal' defaultSelectedKeys={['1']} style={{ lineHeight: '64px' }}>
-              <Menu.Item key='1'>Metadata</Menu.Item>
-              <Menu.Item key='2'>Permissions</Menu.Item>
+              <Menu.Item key='1'><Link to='/'>Metadata</Link></Menu.Item>
+              <Menu.Item key='2'><Link to='/permissions'>Permissions</Link></Menu.Item>
               <Menu.Item key='3'>Parameters</Menu.Item>
               <Menu.Item key='4'>Paths</Menu.Item>
               <Menu.Item key='5'>Models</Menu.Item>
