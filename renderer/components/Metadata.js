@@ -1,7 +1,7 @@
 import React from 'react'
 import { Table } from 'antd'
 
-class Info extends React.Component {
+class Metadata extends React.Component {
   render () {
     const columns = [{
       title: 'Name',
@@ -16,15 +16,15 @@ class Info extends React.Component {
     const dataSource = [{
       key: '1',
       name: 'Version',
-      value: this.props.info.version
+      value: this.props.metadata.version
     }, {
       key: '2',
       name: 'Title',
-      value: this.props.info.title
+      value: this.props.metadata.title
     }, {
       key: '3',
       name: 'Description',
-      value: this.props.info.description
+      value: this.props.metadata.description
     }]
 
     return (
@@ -35,4 +35,4 @@ class Info extends React.Component {
   }
 }
 
-export default Info
+export default Metadata

@@ -15,7 +15,7 @@ const spec = (spec = null, action) => {
       return action.spec
     case 'NEW_SPEC':
       return {
-        info: {
+        metadata: {
           version: 'Version of the API',
           title: 'Title of the API',
           description: 'Description of the API',
