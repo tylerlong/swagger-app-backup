@@ -4,7 +4,7 @@ import path from 'path'
 let browserWindow = null
 
 function createWindow () {
-  browserWindow = new BrowserWindow({ width: 800, height: 600 })
+  browserWindow = new BrowserWindow({ width: 1024, height: 768 })
   browserWindow.loadURL(path.join('file://', __dirname, '../renderer/index.html'))
 
   browserWindow.webContents.openDevTools()
