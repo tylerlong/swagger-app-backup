@@ -14,15 +14,15 @@ class Metadata extends React.Component {
     }]
 
     const dataSource = [{
-      key: '1',
+      key: 'version',
       name: 'Version',
       value: this.props.metadata.version
     }, {
-      key: '2',
+      key: 'title',
       name: 'Title',
       value: this.props.metadata.title
     }, {
-      key: '3',
+      key: 'description',
       name: 'Description',
       value: this.props.metadata.description
     }]

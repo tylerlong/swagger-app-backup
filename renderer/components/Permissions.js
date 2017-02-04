@@ -9,12 +9,12 @@ class Permissions extends React.Component {
     return (
       <Layout className='layout'>
         <Header>
-          <Menu theme='dark' mode='horizontal' defaultSelectedKeys={['2']} style={{ lineHeight: '64px' }}>
-            <Menu.Item key='1'><Link to='/'>Metadata</Link></Menu.Item>
-            <Menu.Item key='2'><Link to='/permissions'>Permissions</Link></Menu.Item>
-            <Menu.Item key='3'>Parameters</Menu.Item>
-            <Menu.Item key='4'>Paths</Menu.Item>
-            <Menu.Item key='5'>Models</Menu.Item>
+          <Menu theme='dark' mode='horizontal' defaultSelectedKeys={['permissions']} style={{ lineHeight: '64px' }}>
+            <Menu.Item key='metadata'><Link to='/'>Metadata</Link></Menu.Item>
+            <Menu.Item key='permissions'><Link to='/permissions'>Permissions</Link></Menu.Item>
+            <Menu.Item key='parameters'>Parameters</Menu.Item>
+            <Menu.Item key='paths'>Paths</Menu.Item>
+            <Menu.Item key='models'>Models</Menu.Item>
           </Menu>
         </Header>
         <Content style={{ padding: '0 48px' }}>
