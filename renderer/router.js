@@ -6,9 +6,7 @@ import _App from './components/App'
 import Permissions from './components/Permissions'
 import { newSpec } from './actions'
 
-const App = connect((state) => {
-  return { spec: state.spec }
-}, { newSpec })(_App)
+const App = connect(state => ({ spec: state.spec }), { newSpec })(_App)
 
 const router = (
   <Router history={hashHistory} >

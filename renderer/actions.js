@@ -1,3 +1,1 @@
-export const newSpec = () => {
-  return { type: 'NEW_SPEC' }
-}
+export const newSpec = () => ({ type: 'NEW_SPEC' })

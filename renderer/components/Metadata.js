@@ -3,13 +3,13 @@ import { Table } from 'antd'
 
 class Metadata extends React.Component {
   render () {
-    const columns = ['Name', 'Value'].map((item) => ({
+    const columns = ['Name', 'Value'].map(item => ({
       title: item,
       dataIndex: item.toLowerCase(),
       key: item.toLowerCase()
     }))
 
-    const dataSource = ['Version', 'Title', 'Description'].map((item) => ({
+    const dataSource = ['Version', 'Title', 'Description'].map(item => ({
       key: item.toLowerCase(),
       name: item,
       value: this.props.metadata[item.toLowerCase()]
