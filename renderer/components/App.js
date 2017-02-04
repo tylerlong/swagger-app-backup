@@ -1,5 +1,5 @@
 import React from 'react'
-import { Layout, Menu, Button } from 'antd'
+import { Layout, Menu, Button, Breadcrumb } from 'antd'
 import { Link } from 'react-router'
 
 import Metadata from './metadata'
@@ -30,6 +30,11 @@ class App extends React.Component {
             </Menu>
           </Header>
           <Content style={{ padding: '0 48px' }}>
+            <Breadcrumb style={{ margin: '12px 0' }}>
+              <Breadcrumb.Item>Home</Breadcrumb.Item>
+              <Breadcrumb.Item>List</Breadcrumb.Item>
+              <Breadcrumb.Item>Metadata</Breadcrumb.Item>
+            </Breadcrumb>
             <Metadata metadata={this.props.spec.metadata} />
           </Content>
           <Footer style={{ textAlign: 'center' }}>

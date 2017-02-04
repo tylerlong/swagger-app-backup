@@ -1,5 +1,5 @@
 import React from 'react'
-import { Layout, Menu } from 'antd'
+import { Layout, Menu, Breadcrumb } from 'antd'
 import { Link } from 'react-router'
 
 const { Header, Content, Footer } = Layout
@@ -18,11 +18,18 @@ class Permissions extends React.Component {
           </Menu>
         </Header>
         <Content style={{ padding: '0 48px' }}>
-          <h1>Permissions</h1>
+          <Breadcrumb style={{ margin: '12px 0' }}>
+            <Breadcrumb.Item>Home</Breadcrumb.Item>
+            <Breadcrumb.Item>List</Breadcrumb.Item>
+            <Breadcrumb.Item>Permissions</Breadcrumb.Item>
+          </Breadcrumb>
+          <div style={{ background: '#fff', padding: '24px', minHeight: '256px' }}>
+            <h1>Permissions</h1>
+          </div>
         </Content>
         <Footer style={{ textAlign: 'center' }}>
-            RingCentral ©2017 Created by Tyler Long
-          </Footer>
+          RingCentral ©2017 Created by Tyler Long
+        </Footer>
       </Layout>
     )
   }
