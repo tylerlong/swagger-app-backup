@@ -4,7 +4,7 @@ import { LocaleProvider } from 'antd'
 import enUS from 'antd/lib/locale-provider/en_US'
 import { Provider, connect } from 'react-redux'
 
-import _App from './App'
+import _App from './components/App'
 import store from './store'
 import { newSpec } from './actions'
 

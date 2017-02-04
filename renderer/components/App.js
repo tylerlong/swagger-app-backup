@@ -1,6 +1,8 @@
 import React from 'react'
-import { Layout, Menu, Button, Table } from 'antd'
+import { Layout, Menu, Button } from 'antd'
 const { Header, Content, Footer } = Layout
+
+import Info from './info'
 
 class App extends React.Component {
   render () {
@@ -12,29 +14,6 @@ class App extends React.Component {
         </div>
       )
     } else {
-      const { info } = this.props.spec
-      const columns = [{
-        title: 'Name',
-        dataIndex: 'name',
-        key: 'name'
-      }, {
-        title: 'Value',
-        dataIndex: 'value',
-        key: 'value'
-      }]
-      const dataSource = [{
-        key: '1',
-        name: 'Version',
-        value: info.version
-      }, {
-        key: '2',
-        name: 'Title',
-        value: info.title
-      }, {
-        key: '3',
-        name: 'Description',
-        value: info.description
-      }]
       return (
         <Layout className='layout'>
           <Header>
@@ -47,9 +26,7 @@ class App extends React.Component {
             </Menu>
           </Header>
           <Content style={{ padding: '0 50px' }}>
-            <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>
-              <Table columns={columns} dataSource={dataSource} pagination={false} />
-            </div>
+            <Info info={this.props.spec.info} />
           </Content>
           <Footer style={{ textAlign: 'center' }}>
             RingCentral ©2017 Created by Tyler Long
