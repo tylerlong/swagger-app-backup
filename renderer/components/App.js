@@ -8,9 +8,11 @@ class App extends React.Component {
   render () {
     if (this.props.spec == null) {
       return (
-        <div style={{ background: '#ECECEC', padding: '32px', margin: '32px', textAlign: 'center', minHeight: '128px' }} >
-          <Button type='primary' size='large' style={{ marginRight: '32px' }} icon='folder-open'>Open</Button>
-          <Button size='large' icon='addfile' onClick={() => this.props.newSpec()}>Create</Button>
+        <div style={{ padding: '32px' }}>
+          <div style={{ background: '#ECECEC', padding: '32px', textAlign: 'center', minHeight: '128px' }} >
+            <Button size='large' style={{ margin: '0 16px' }} icon='folder-open'>Open</Button>
+            <Button size='large' style={{ margin: '0 16px' }} icon='addfile' onClick={() => this.props.newSpec()}>Create</Button>
+          </div>
         </div>
       )
     } else {
