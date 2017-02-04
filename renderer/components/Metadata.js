@@ -3,29 +3,23 @@ import { Table } from 'antd'
 
 class Metadata extends React.Component {
   render () {
-    const columns = [{
-      title: 'Name',
-      dataIndex: 'name',
-      key: 'name'
-    }, {
-      title: 'Value',
-      dataIndex: 'value',
-      key: 'value'
-    }]
+    const columns = [];
+    ['Name', 'Value'].forEach((item) => {
+      columns.push({
+        title: item,
+        dataIndex: item.toLowerCase(),
+        key: item.toLowerCase()
+      })
+    })
 
-    const dataSource = [{
-      key: 'version',
-      name: 'Version',
-      value: this.props.metadata.version
-    }, {
-      key: 'title',
-      name: 'Title',
-      value: this.props.metadata.title
-    }, {
-      key: 'description',
-      name: 'Description',
-      value: this.props.metadata.description
-    }]
+    const dataSource = [];
+    ['Version', 'Title', 'Description'].forEach((item) => {
+      dataSource.push({
+        key: item.toLowerCase(),
+        name: item,
+        value: this.props.metadata[item.toLowerCase()]
+      })
+    })
 
     return (
       <div style={{ background: '#fff', padding: '24px', minHeight: '256px' }}>
