@@ -17,3 +17,11 @@ yarn install
 yarn build
 yarn start
 ```
+
+
+## todo list
+
+- Write tests
+- Setup CI
+- Code coverage should be 90+%
+- migrate data from PostgreSQL
