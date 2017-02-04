@@ -13,7 +13,7 @@ class App extends React.Component {
         <div style={{ padding: '32px' }}>
           <div style={{ background: '#ECECEC', padding: '32px', textAlign: 'center', minHeight: '128px' }} >
             <Button size='large' style={{ margin: '0 16px' }} icon='folder-open'>Open</Button>
-            <Button size='large' style={{ margin: '0 16px' }} icon='addfile' onClick={() => this.props.newSpec()}>Create</Button>
+            <Button size='large' style={{ margin: '0 16px' }} icon='file-add' onClick={() => this.props.newSpec()}>Create</Button>
           </div>
         </div>
       )
