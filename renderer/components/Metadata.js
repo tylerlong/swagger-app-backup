@@ -28,7 +28,7 @@ class Metadata extends React.Component {
     }]
 
     return (
-      <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>
+      <div style={{ background: '#fff', padding: '24px', minHeight: '256px' }}>
         <Table columns={columns} dataSource={dataSource} pagination={false} />
       </div>
     )

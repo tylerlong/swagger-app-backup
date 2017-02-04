@@ -27,7 +27,7 @@ class App extends React.Component {
               <Menu.Item key='5'>Models</Menu.Item>
             </Menu>
           </Header>
-          <Content style={{ padding: '0 50px' }}>
+          <Content style={{ padding: '0 48px' }}>
             <Metadata metadata={this.props.spec.metadata} />
           </Content>
           <Footer style={{ textAlign: 'center' }}>
