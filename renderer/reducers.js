@@ -16,12 +16,12 @@ const spec = (spec = null, action) => {
     case 'NEW_SPEC':
       return {
         metadata: {
-          version: 'Version of the API',
-          title: 'Title of the API',
-          description: 'Description of the API',
-          terms_of_service: 'Url to Terms of Service page',
-          host: 'Host of the API server',
-          base_path: '/',
+          version: '1.0',
+          title: 'Example API',
+          description: 'Restful API for Example',
+          termsOfService: 'https://www.example.com/terms-of-service',
+          host: 'api.example.com',
+          basePath: '/',
           schemes: 'https',
           produces: 'application/json',
           consumes: 'application/json'

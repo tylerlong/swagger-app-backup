@@ -26,3 +26,5 @@ yarn start
 - Code coverage should be 90+%
 - migrate data from PostgreSQL
 - Show recent files list in home page
+- Design according to http://swagger.io/specification/
+- Find way to update title declaratively
