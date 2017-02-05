@@ -19,7 +19,7 @@ class App extends React.Component {
       )
     } else {
       return (
-        <Layout className='layout'>
+        <Layout className='layout' style={{ height: '100vh' }}>
           <Header>
             <Menu theme='dark' mode='horizontal' defaultSelectedKeys={['metadata']} style={{ lineHeight: '64px' }}>
               <Menu.Item key='metadata'><Link to='/'>Metadata</Link></Menu.Item>

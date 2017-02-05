@@ -7,7 +7,7 @@ const { Header, Content, Footer } = Layout
 class Permissions extends React.Component {
   render () {
     return (
-      <Layout className='layout'>
+      <Layout className='layout' style={{ height: '100vh' }}>
         <Header>
           <Menu theme='dark' mode='horizontal' defaultSelectedKeys={['permissions']} style={{ lineHeight: '64px' }}>
             <Menu.Item key='metadata'><Link to='/'>Metadata</Link></Menu.Item>
