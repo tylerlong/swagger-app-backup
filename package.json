@@ -21,7 +21,7 @@
     "babel-preset-env": "^1.1.8",
     "babel-preset-react": "^6.22.0",
     "css-loader": "^0.26.1",
-    "npm-check-updates": "^2.8.10",
+    "npm-check-updates": "^2.10.0",
     "standard": "^8.6.0",
     "style-loader": "^0.13.1",
     "webpack": "^2.2.1"
