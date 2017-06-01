@@ -1,3 +1,4 @@
+import path from 'path'
 import rules from './webpack.config.base'
 
 const rendererRules = [
@@ -25,7 +26,7 @@ const rendererConfig = {
   entry: './renderer/index.js',
   output: {
     filename: 'bundle.js',
-    path: './renderer'
+    path: path.join(__dirname, './renderer')
   },
   module: { rules: rules.concat(rendererRules) }
 }

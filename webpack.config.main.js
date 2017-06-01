@@ -1,3 +1,4 @@
+import path from 'path'
 import rules from './webpack.config.base'
 
 const mainRules = [
@@ -9,7 +10,7 @@ const mainRules = [
         presets: [
           ['env', {
             'targets': {
-              'electron': 1.4
+              'electron': '1.6'
             }
           }]
         ]
@@ -23,7 +24,7 @@ const mainConfig = {
   entry: './main/index.js',
   output: {
     filename: 'bundle.js',
-    path: './main'
+    path: path.join(__dirname, './main')
   },
   node: { // Don't mock the following:
     __dirname: false,
